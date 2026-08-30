@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIMS-NVSU-ADMIN-REQUESTS-STATUS-ITEM</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="admin-ucao-3.css">
+</head>
+<body>
+<!--======== HEAD ======== -->
+<nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img class="logo0" src="logo/nvsugif.gif" alt="NVSU Logo">
+        <a href="#" class="logo">BRIMS-NVSU-ADMIN</a>
+      </div>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="admin-ucao-1.html" class="nav-link"><i class="fa-solid fa-plus"></i> Add Item</a></li>
+        <li class="nav-item"><a href="admin-ucao-2.php" class="nav-link"><i class="fa-solid fa-pen-to-square"></i> Update Item</a></li>
+        <li class="nav-item"><a href="admin-ucao-3.html" class="nav-link active-link"><i class="fa-solid fa-file-lines"></i> Requests & Status</a></li>
+        <li class="nav-item"><a href="logout.php" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+<!--======== /HEAD ======== -->
+
+<!--======== BODY ======== -->
+<!--======== /BODY ======== -->
+
+<!--======== FOOT ======== -->
+<footer>
+        <div class="footer-content">
+            <i class="fa-solid fa-shield-halved"></i>
+            
+            <span>Secure</span>•<span>Reliable</span>•<span>Efficient</span>
+        </div>
+
+        <p>&copy; 2026 BRIMS-NVSU</p>
+    </footer>
+<!--======== /FOOT ======== -->
+
+<!--========= JS ========-->
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    // Toggle menu and hamburger icon state
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking any menu link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+  <script src="admin-ucao-1.js"></script>
+</body>
+</html>

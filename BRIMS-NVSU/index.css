@@ -1,0 +1,310 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/*Head*/
+.hero{
+    position:relative;
+    width:100%;
+    height:420px;
+    background: #1B5E20;
+    border-bottom-left-radius:45px;
+    border-bottom-right-radius:45px;
+    overflow:hidden;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.15);
+}
+
+nav{
+    position:relative;
+    z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 30px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logo img{
+    width:72px;
+}
+
+.logo h2{
+    color:#fff;
+    font-size:42px;
+    font-weight:700;
+}
+
+.logo p{
+    color:#f1f1f1;
+    font-size:18px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:10;
+    text-align:center;
+    margin-top:45px;
+}
+
+.hero-content h1{
+    color:#fff;
+    font-size:60px;
+    font-weight:700;
+}
+
+.hero-content p{
+    color:#eee;
+    margin-top:15px;
+    font-size:25px;
+}
+
+/* Decorative circles */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.07);
+}
+
+.circle1{
+    width:320px;
+    height:320px;
+    right:-90px;
+    top:80px;
+}
+
+.circle2{
+    width:180px;
+    height:180px;
+    left:-70px;
+    bottom:-70px;
+}
+
+/*Body*/
+
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:-70px auto 50px;
+    position:relative;
+    z-index:100;
+}
+
+/*Card*/
+
+.card{
+    background:#fff;
+    border-radius:30px;
+    padding:35px;
+    margin-bottom:35px;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 45px rgba(0,0,0,.15);
+}
+
+.top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.icon{
+    width:140px;
+    height:140px;
+    border-radius:28px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+    flex-shrink:0;
+}
+
+.student{
+    background:#eef9ef;
+    color:#1B5E20;
+}
+
+.admin{
+    background:#eef2ff;
+    color:#1d4ed8;
+}
+
+.text{
+    flex:1;
+}
+
+.text h2{
+    font-size:38px;
+    margin-bottom:10px;
+    color:#1B5E20;
+}
+
+.line{
+    width:80px;
+    height:6px;
+    background:#1B5E20;
+    border-radius:30px;
+    margin-bottom:18px;
+}
+
+.blue{
+    background:#2563eb;
+}
+
+.text p{
+    color:#666;
+    font-size:20px;
+    line-height:1.7;
+}
+
+button{
+    margin-top:30px;
+    width:100%;
+    border:none;
+    border-radius:16px;
+    padding:20px;
+    font-size:22px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button i{
+    margin-left:10px;
+}
+
+#studentBtn{
+    color:#fff;
+    background:#1B5E20;
+}
+
+#studentBtn:hover{
+    transform:scale(1.02);
+    box-shadow:0 10px 30px rgba(20,120,40,.35);
+}
+
+.admin-btn{
+    color:#fff;
+    background:linear-gradient(90deg,#1d4ed8,#2563eb);
+}
+
+.admin-btn:hover{
+    transform:scale(1.02);
+    box-shadow:0 10px 30px rgba(37,99,235,.35);
+}
+
+/*Footer*/
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+    color:#166534;
+    margin-bottom:12px;
+}
+
+.footer-content i{
+    font-size:22px;
+}
+
+footer p{
+    color:#666;
+    font-size:17px;
+}
+
+/*==========================
+RESPONSIVE
+===========================*/
+
+@media(max-width:768px){
+
+.hero{
+    height:350px;
+}
+
+.logo img{
+    width:55px;
+}
+
+.logo h2{
+    font-size:30px;
+}
+
+.logo p{
+    font-size:14px;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.container{
+    margin-top:-50px;
+}
+
+.top{
+    flex-direction:column;
+    text-align:center;
+}
+
+.icon{
+    width:110px;
+    height:110px;
+    font-size:46px;
+}
+
+.arrow{
+    display:none;
+}
+
+.text h2{
+    font-size:30px;
+}
+
+.text p{
+    font-size:17px;
+}
+
+button{
+    font-size:18px;
+}
+
+.footer-content{
+    flex-wrap:wrap;
+}
+}

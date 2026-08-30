@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIMS-NVSU-ADMIN-ADD-ITEM</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="admin-ucao-1.css">
+    <link rel="stylesheet" href="admin-ucao-1.css">
+</head>
+<body>
+<!--======== HEAD ======== -->
+<nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <img class="logo0" src="logo/nvsugif.gif" alt="NVSU Logo">
+        <a href="#" class="logo">BRIMS-NVSU-ADMIN</a>
+      </div>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="admin-ucao-1.html" class="nav-link active-link"><i class="fa-solid fa-plus"></i> Add Item</a></li>
+        <li class="nav-item"><a href="admin-ucao-2.php" class="nav-link"><i class="fa-solid fa-pen-to-square"></i> Update Item</a></li>
+        <li class="nav-item"><a href="admin-ucao-3.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Requests & Status</a></li>
+        <li class="nav-item"><a href="logout.php" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+<!--======== /HEAD ======== -->
+
+<!--======== BODY ======== -->
+<main class="main-container">
+
+    <section class="page-heading">
+        <div class="heading-icon">
+            <i class="fa-solid fa-box"></i>
+        </div>
+        <div>
+            <h2>ADD NEW ITEM</h2>
+            <p>Fill in the details below to add a new item to the inventory.</p>
+        </div>
+    </section>
+
+<section class="form-card">
+        <!-- Added enctype="multipart/form-data" for file handling -->
+        <form id="assetForm" action="admin-ucao-1.php" method="post" enctype="multipart/form-data">
+
+            <!-- Item Name -->
+            <div class="form-group">
+                <label for="itemName">
+                    <i class="fa-solid fa-tag"></i>
+                    Item Name
+                </label>
+                <input type="text" id="itemName" name="itemName" placeholder="Enter item name" required>
+            </div>
+
+            <!-- Quantity -->
+            <div class="form-group">
+                <label for="quantity">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Total Quantity
+                </label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter total quantity" min="1" required>
+            </div>
+
+            <!-- Picture -->
+            <div class="form-group">
+                <label>
+                    <i class="fa-solid fa-image"></i>
+                    Item Picture
+                </label>
+
+                <div class="upload-box" id="uploadBox">
+                    <input type="file" id="itemPicture" name="itemPicture" accept="image/png,image/jpeg" hidden>
+                    <div class="upload-content">
+                        <div class="upload-icon">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+                        <strong>Upload Picture (JPG/PNG)</strong>
+                        <span>Click or drag file to upload</span>
+                    </div>
+                </div>
+
+                <!-- Image Preview -->
+                <div class="image-preview" id="imagePreview">
+                    <img id="previewImage" src="" alt="Preview">
+                    <button type="button" id="removeImage">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">
+                    <i class="fa-solid fa-file-lines"></i>
+                    Item Description
+                </label>
+                <textarea id="description" name="description" placeholder="Enter item description" rows="5"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn" id="submitBtn" name="submit">
+                <i class="fa-solid fa-box"></i>
+                ADD ITEM TO INVENTORY
+            </button>
+
+        </form>
+    </section>
+<!--======== /BODY ======== -->
+
+<!--======== FOOT ======== -->
+<footer>
+        <div class="footer-content">
+            <i class="fa-solid fa-shield-halved"></i>
+            
+            <span>Secure</span>•<span>Reliable</span>•<span>Efficient</span>
+        </div>
+
+        <p>&copy; 2026 BRIMS-NVSU</p>
+    </footer>
+<!--======== /FOOT ======== -->
+
+<!--========= JS ========-->
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    // Toggle menu and hamburger icon state
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking any menu link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+  <script src="admin-ucao-1.js"></script>
+</body>
+</html>
